@@ -126,7 +126,7 @@ header nav button#account:hover::before, header nav button#account:hover::after 
   width: 100%;
   height: 100%;
   padding: 0 0;
-  background: url("../assets/bg/bg3.jpg") no-repeat center/cover;
+
   position: fixed;
   top: 0;
   left: 0;
