@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face{
+  font-family: "dear-font";
+  src: url(../assets/fonts/dear.otf);
+}
+@font-face{
+  font-family: "custom-font";
+  src: url(../assets/fonts/Cerotta\ Personal\ Use\ Only.ttf);
+}
+@font-face{
+  font-family: "heading-font";
+  src: url(../assets/fonts/Bristle\ Radiant\ DEMO\ VERSION.otf);
+}
+@font-face{
+  font-family: "moving-font";
+  src: url(../assets/fonts/Moving.ttf);
+}
+@font-face{
+  font-family: "lamoric-font";
+  src: url(../assets/fonts/Lamoric.ttf);
+}
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+all: unset;
+  text-decoration: none;
+  color: black
+}
+a:selected{
+all: unset;
+}
+
+ul{
+  list-style: none;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.capitalize{
+  text-transform: capitalize;
+}

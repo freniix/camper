@@ -1,0 +1,85 @@
+#section-one {
+  min-height: 100svh;
+  background-color: rgba(55, 56, 34, 0.212);
+  // background-color: rgba(0, 31, 167, 0.212);
+  padding: 5rem;
+  @include flex-between();
+
+  .left {
+    @include flex-center(1rem, "column");
+    color: var(--primary-color);
+    font-family: "roboto";
+    font-weight: 400;
+    font-size: 1.1rem;
+    p {
+      writing-mode: vertical-rl;
+      user-select: none;
+    }
+    i {
+      cursor: pointer;
+    }
+  }
+  //left ends
+  .hero-content {
+    font-family: "lamoric-font";
+    color: var(--primary-color);
+
+    h5 {
+      font-size: 1.2rem;
+      color: rgb(221, 69, 153);
+      text-indent: 5rem;
+      margin-bottom: 1rem;
+      position: relative;
+      @include line-before("rgb(221, 69, 153)");
+    }
+    h1 {
+      font-size: 4rem;
+      transform: scaleY(1.2);
+      color: rgb(255, 255, 255);
+      text-shadow: 10px 10px 15px black;
+    }
+    button {
+      @include button-styles("rgb(177, 157, 44)");
+      display: block;
+      padding: 1rem 2rem;
+      font-family: "roboto";
+      color: rgb(58, 53, 5);
+      border-radius: 0.2rem;
+      margin: 1rem auto;
+      &:hover {
+        clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%, 10% 50%);
+      }
+    }
+  }
+  // hero ends
+
+  .right {
+    ul {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: "roboto";
+      text-align: right;
+      color: rgb(228, 228, 214);
+
+      li {
+        user-select: none;
+        padding: 1rem 0.5rem;
+        position: relative;
+        cursor: pointer;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0.2rem;
+          background-color: rgba(255, 255, 255, 0.534);
+          height: 100%;
+          right: -10%;
+          top: 0;
+          transition: all 0.2s ease-in-out;
+        }
+        &.active::after {
+          background-color: rgb(234, 0, 255);
+        }
+      }
+    }
+  }
+}
