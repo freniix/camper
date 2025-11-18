@@ -34,7 +34,7 @@
     padding: #{$y} 0;
   }
 }
-@mixin button-styles($bg: "transparent", $pad: "10px 10px", $font: 16) {
+@mixin button-styles($bg: "transparent", $pad: "0.75rem 0.75rem", $font: 16) {
   background-color: #{$bg};
   border: none;
   font-size: rem($font);

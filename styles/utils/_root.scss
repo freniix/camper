@@ -1,8 +1,12 @@
 :root {
-  --clr-primary: rgb(58, 53, 5);
+  --clr-primary: rgb(223, 207, 64);
+  --clr-primary-transparent: rgba(223, 207, 64, 0.26);
   --clr-secondary: hsl(0 0 70);
+  --clr-dark: hsl(0 0 10);
   --clr-bg: #0b1d27;
   --clr-text: hsl(0 0 90);
   --clr-muted: hsl(0 0 70);
-  --shadow-md: 0px 20px 6px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0px 4px 6px rgba(0, 0, 0, 0.6);
+
+  --test-border: 1px solid red;
 }

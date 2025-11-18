@@ -63,3 +63,23 @@ header {
     }
   }
 }
+
+
+@media (max-width: rem(1080)) {
+header{
+  nav{
+    ul{
+      display: none;
+    }
+    button{
+      display: none;
+    }
+  }
+}
+}
+
+@media (max-width: rem(730)) {
+header{
+  display: none;
+}
+}

@@ -7,7 +7,7 @@
     content: "";
     position: absolute;
     height: 20vh;
-    width: 100%;  
+    width: 100%;
     top: 0;
     left: 0;
     transform: translateY(-100%);
@@ -40,13 +40,13 @@
       }
       .long-title {
         font-size: 2rem;
-        color: var(--clr-primary);
+        color: var(--clr-text);
         font-family: "Times New Roman", Times, serif;
         margin: 1rem 0;
         letter-spacing: 1px;
       }
       .desc {
-        color: var(--clr-text);
+        color: var(--clr-muted);
         word-spacing: 4px;
         line-height: 1.2rem;
         .company-name {
@@ -68,12 +68,13 @@
 
     .right {
       width: 60%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16 / 12;
       overflow: hidden;
       border-radius: 12rem 0 0 12rem;
       box-shadow: -10px 10px 20px black;
       img {
         width: 100%;
+        height: 100%;
         // object-position: bottom;
         object-position: center;
 
@@ -91,7 +92,7 @@
       h4 {
         font-size: 3rem;
         width: 15ch;
-        color: var(--primary-color);
+        color: var(--clr-text);
       }
       button {
         @include button-styles(rgb(233, 233, 151));
@@ -104,7 +105,7 @@
     .right-part {
       // columns: 1;
       width: 50ch;
-      color: var(--secondary-text);
+      color: var(--clr-text);
       p {
         white-space: normal;
         font-size: 1rem;
@@ -119,36 +120,117 @@
   }
 
   .swiper {
-
     justify-content: center;
     display: flex;
     margin: 5rem auto;
-    width: 80%;
+    width: 90%;
+    // overflow: hidden;
+
     .swiper-wrapper {
+      margin: 1rem;
       .swiper-slide {
-        cursor:  pointer;
-        height: rem(400);
+        cursor: pointer;
+        // height: rem(400);
+        aspect-ratio: 4/ 5;
+        width: 22rem !important;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 20px;
-        backface-visibility: hidden;
+
         h4 {
-          bottom: 10%;
-          left: 50%;
+          top: 10px;
+          left: 10px;
           font-family: "Montserrat";
-          transform: translateX(-50%);
           width: fit-content;
           white-space: nowrap;
-          color: var(--clr-text);
-            -webkit-text-stroke: 1px rgba(0,0,0,0.7);
-          text-shadow: 3px 3px 5px black;
+          padding: 0.5rem;
+          border-radius: 0 20px 0 20px;
+          color: hsl(0, 28%, 13%);
+          background-color: gold;
           position: absolute;
+          z-index: 999999;
+          display: none;
+          // animation: 1s fade;
+        }
+        &.swiper-slide-active h4 {
+          display: block;
         }
       }
     }
-    .swiper-button-prev, .swiper-button-next{
-      color:white;
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: white;
     }
+  }
+}
+
+@media (max-width: rem(1080)) {
+  #section-two {
+    article {
+      .left {
+        margin: 0 10rem;
+        .title {
+          letter-spacing: 2px;
+          font-size: 0.8rem;
+        }
+        .long-title {
+          font-size: 1.7rem;
+        }
+        .desc {
+          word-spacing: 4px;
+          line-height: 1.5;
+          font-size: 0.9rem;
+        }
+        button {
+          margin: 0.5rem 0;
+          a {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: rem(700)) {
+  #section-two {
+    padding: 1rem;
+    article {
+      flex-direction: column;
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+      .left {
+        margin: 0;
+        width: 40ch;
+      }
+      .right,
+      .right:nth-child(even) {
+        border-radius: 20px;
+        margin-top: 2rem;
+        width: 80%;
+      }
+    }
+
+      #navigate {
+
+    grid-template-columns: 1fr;
+    .left-part {
+
+      button {
+        display: block;
+        margin: 2rem 0;
+        padding: 1rem 3rem;
+      }
+    }
+    .right-part {
+      width: 45ch;
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+    }
+  }
   }
 }

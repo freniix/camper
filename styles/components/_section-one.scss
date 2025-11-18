@@ -1,7 +1,7 @@
 #section-one {
   min-height: 100svh;
+  width: 100%;
   background-color: rgba(55, 56, 34, 0.212);
-  // background-color: rgba(0, 31, 167, 0.212);
   padding: 5rem;
   @include flex-between();
 
@@ -46,7 +46,7 @@
       width: fit-content;
       padding: 1rem 2rem;
       font-family: "roboto";
-      color: var(--clr-primary) ;
+      color: var(--clr-dark) ;
       border-radius: 0.2rem;
       margin: 1rem auto;
       &:hover {
@@ -82,6 +82,30 @@
         &.active::after {
           background-color: rgb(234, 0, 255);
         }
+      }
+    }
+  }
+}
+
+@media (max-width: rem(1080)) {
+  #section-one{
+    justify-content: center;
+    .left, .right{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: rem(730)) {
+  #section-one{
+    padding: 1rem;
+    .hero-content {
+      h2{
+        font-size: .9rem;
+      }
+      h1{
+        font-size: 2.2rem;
+        margin: 1rem 0 3rem ;
       }
     }
   }
