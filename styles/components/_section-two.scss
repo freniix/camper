@@ -1,6 +1,5 @@
 #section-two {
   width: 100%;
-  // height: 400vh;
   background-color: #0b1d27;
   padding: 7rem 0;
   position: relative;
@@ -17,12 +16,12 @@
   article {
     @include flex-center();
     font-family: "roboto";
-    margin-bottom:5rem;
-
-    &:nth-child(even){
+    margin-bottom: 5rem;
+    &:nth-child(even) {
       flex-direction: row-reverse;
-      .right{
-        border-radius: 0 12rem 12rem 0 ;
+      .right {
+        border-radius: 0 12rem 12rem 0;
+        box-shadow: 10px 10px 20px black;
       }
     }
 
@@ -50,16 +49,15 @@
         color: var(--secondary-text);
         word-spacing: 4px;
         line-height: 1.2rem;
-        .company-name{
+        .company-name {
           color: rgb(206, 206, 16);
           font-weight: 800;
         }
-
       }
       button {
         @include button-styles($pad: "0px");
         display: block;
-        margin: .5rem 0;
+        margin: 0.5rem 0;
         a {
           font-weight: 600;
           font-size: 0.8rem;
@@ -73,13 +71,82 @@
       aspect-ratio: 16 / 9;
       overflow: hidden;
       border-radius: 12rem 0 0 12rem;
+      box-shadow: -10px 10px 20px black;
       img {
-        width:  100%;
+        width: 100%;
         // object-position: bottom;
         object-position: center;
 
         object-fit: cover;
       }
+    }
+  }
+  #navigate {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+
+    .left-part {
+      // columns: 1;
+      h4 {
+        font-size: 3rem;
+        width: 15ch;
+        color: var(--primary-color);
+      }
+      button {
+        @include button-styles(rgb(233, 233, 151));
+        font-family: "roboto";
+        font-size: 1.2rem;
+        padding: 0.5rem 2rem;
+        border-radius: 8px;
+      }
+    }
+    .right-part {
+      // columns: 1;
+      width: 50ch;
+      color: var(--secondary-text);
+      p {
+        white-space: normal;
+        font-size: 1rem;
+        font-family: "roboto";
+
+        .gap {
+          display: block;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .swiper {
+
+    justify-content: center;
+    display: flex;
+    margin: 5rem auto;
+    width: 80%;
+    .swiper-wrapper {
+      .swiper-slide {
+        cursor:  pointer;
+        height: rem(400);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        h4 {
+          bottom: 10%;
+          left: 50%;
+          font-family: "Montserrat";
+          transform: translateX(-50%);
+          width: fit-content;
+          white-space: nowrap;
+          color: white;
+          text-shadow: 3px 3px 5px black;
+          position: absolute;
+        }
+      }
+    }
+    .swiper-button-prev, .swiper-button-next{
+      color:white;
     }
   }
 }

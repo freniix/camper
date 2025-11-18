@@ -1,0 +1,5 @@
+"Montserrat"
+"Inter"
+"Nunito Sans"
+"Poppins"
+"Rubik"
