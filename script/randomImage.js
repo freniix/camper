@@ -5,3 +5,4 @@ document.write(
   background: url("./assets/image/${images[randomNum]}") no-repeat center / cover !important;
   } </style>`
 )
+

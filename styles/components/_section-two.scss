@@ -7,7 +7,7 @@
     content: "";
     position: absolute;
     height: 20vh;
-    width: 100%;
+    width: 100%;  
     top: 0;
     left: 0;
     transform: translateY(-100%);
@@ -40,13 +40,13 @@
       }
       .long-title {
         font-size: 2rem;
-        color: var(--primary-color);
+        color: var(--clr-primary);
         font-family: "Times New Roman", Times, serif;
         margin: 1rem 0;
         letter-spacing: 1px;
       }
       .desc {
-        color: var(--secondary-text);
+        color: var(--clr-text);
         word-spacing: 4px;
         line-height: 1.2rem;
         .company-name {
@@ -132,6 +132,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 20px;
+        backface-visibility: hidden;
         h4 {
           bottom: 10%;
           left: 50%;
@@ -139,7 +140,8 @@
           transform: translateX(-50%);
           width: fit-content;
           white-space: nowrap;
-          color: white;
+          color: var(--clr-text);
+            -webkit-text-stroke: 1px rgba(0,0,0,0.7);
           text-shadow: 3px 3px 5px black;
           position: absolute;
         }

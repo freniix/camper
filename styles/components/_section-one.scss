@@ -7,7 +7,7 @@
 
   .left {
     @include flex-center(1rem, "column");
-    color: var(--primary-color);
+    color: var(--clr-text);
     font-family: "roboto";
     font-weight: 400;
     font-size: 1.1rem;
@@ -16,17 +16,19 @@
       user-select: none;
     }
     i {
+      color: var(--clr-text);
       cursor: pointer;
     }
   }
   //left ends
   .hero-content {
     font-family: "lamoric-font";
-    color: var(--primary-color);
+    color: var(--clr-text);
 
     h2 {
       font-size: 1.2rem;
-      color: rgb(253, 0, 139);
+      color: rgb(255, 255, 255);
+      text-shadow: var(--shadow-md);
       text-indent: 5rem;
       margin-bottom: 1rem;
       position: relative;
@@ -44,7 +46,7 @@
       width: fit-content;
       padding: 1rem 2rem;
       font-family: "roboto";
-      color: rgb(58, 53, 5);
+      color: var(--clr-primary) ;
       border-radius: 0.2rem;
       margin: 1rem auto;
       &:hover {
