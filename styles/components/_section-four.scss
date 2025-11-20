@@ -113,7 +113,7 @@
   }
 }
 
-@media (max-width: rem(700)) {
+@media (max-width: 46rem) {
 
   #section-four {
     .progress {
@@ -132,7 +132,7 @@
           .progress-counter {
             &.connect-right::after,
             &.double-connect::before {
-              width: 8rem;
+              width: 30vw;
             }
           }
         }

@@ -119,11 +119,6 @@ function progressMaintainer() {
     getComputedStyle(document.documentElement).fontSize
   );
 // Getting current base font size
-  console.log(
-    "WIDTH:", window.innerWidth,
-    "| 46rem =", rootSize * 46,
-    "| CONDITION =", window.innerWidth < rootSize * 46
-  );
 
   if (window.innerWidth > rootSize * 67.5) {
     topBottom({ top: [0, 1, 2, 3], bottom: [4, 5, 6, 7] }); //setting label positons
@@ -172,6 +167,13 @@ function progressMaintainer() {
   }
 }
 
+function menuToggle() {
+  const menuIcon = document.querySelector("#menu-icon");
+  const navLinks = document.querySelector("#nav-links");
+  menuIcon.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
 progressMaintainer();
 window.addEventListener("resize", progressMaintainer);
 darkZoneObserver();
